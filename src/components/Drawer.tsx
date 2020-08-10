@@ -6,7 +6,12 @@ import ListItemText from '@material-ui/core/ListItemText'
 import IconButton from '@material-ui/core/IconButton'
 import { Typography } from '@material-ui/core'
 
-class CustomDrawer extends Component {
+interface IDrawer {
+  icon: any
+  list: Array<string>
+}
+
+class CustomDrawer extends Component<IDrawer> {
   state = {
     open: false
   }
@@ -15,7 +20,7 @@ class CustomDrawer extends Component {
     return (
     <div>
       <IconButton color="inherit" onClick={() => this.setState({ open: true })}>
-        {/* {this.props.icon} */}
+        {this.props.icon}
       </IconButton>
       <Drawer 
         open={this.state.open}
@@ -23,7 +28,7 @@ class CustomDrawer extends Component {
         <div style={{ width: 240 }}>
           <Typography>ima list</Typography>
         <List>
-          {/* {console.log(this.props.list)}
+          {console.log(this.props.list)}
           {this.props.list ? 
             this.props.list.map(item => {
               <ListItem>
@@ -34,7 +39,7 @@ class CustomDrawer extends Component {
                 </ListItemText>
               </ListItem>
             })
-          : undefined} */}
+          : undefined}
         </List>
         </div>
       </Drawer>

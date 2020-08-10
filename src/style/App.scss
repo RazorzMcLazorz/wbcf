@@ -1,0 +1,39 @@
+.landingpartone {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .firstSetup {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 95%;
+  }
+}
+
+.landingparttwo {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+  .rowText {
+    display: flex;
+    justify-content: center;
+    width: 95%;
+  }
+  .row {
+    display: flex;
+    align-items: center;
+    width: 95%;
+    margin-top: 50px;
+    .imgbox {
+      display: flex;
+      justify-content: center;
+      width: 50%;
+      height: 400px;
+      .img {
+        height: 100%;
+      }
+    }
+  }
+}

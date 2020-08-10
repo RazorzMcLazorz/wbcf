@@ -13,29 +13,27 @@ export default class ButtonAppBar extends Component {
 
   render() {
     return (
-      <div>
-        <AppBar position="static">
-          <Toolbar style={{ justifyContent: 'space-between' }}>
+      <AppBar position="sticky">
+        <Toolbar style={{ justifyContent: 'space-between' }}>
 
-            {/* <CustomDrawer icon={<MenuIcon/>} list={
-              [
-              'Inventory', 
-              ]
-            }/> */}
-            
-            <a href='/' style={{ color: 'white', textDecoration: 'none' }}>
-              <Typography variant="h6">
-                Wolf's Bane Cabinetry and Furniture
+          <CustomDrawer icon={<MenuIcon />} list={
+            [
+              'Inventory',
+            ]
+          } />
+
+          <a href='/' style={{ color: 'white', textDecoration: 'none' }}>
+            <Typography variant="h6">
+              Wolf's Bane Cabinetry and Furniture
               </Typography>
-            </a>
+          </a>
 
-            <IconButton color="inherit">
-              <ShoppingCartIcon />
-            </IconButton>
+          <IconButton color="inherit">
+            <ShoppingCartIcon />
+          </IconButton>
 
-          </Toolbar>
-        </AppBar>
-      </div>
+        </Toolbar>
+      </AppBar>
     )
   }
 }

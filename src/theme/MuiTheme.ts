@@ -14,6 +14,12 @@ export const MuiTheme = createMuiTheme({
     },
     secondary: {
       main: purple[500]
-    }
+    },
+    background: {
+      default: grey[500]
+    },
+  },
+  typography: {
+    fontFamily: 'Segoe UI Emoji'
   }
 })
