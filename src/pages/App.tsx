@@ -14,7 +14,7 @@ export default class App extends Component {
           <Typography variant='h4' className='rowText'>
             Expect the unexpected. And whenever possible, be the unexpected.
           </Typography>
-          <div className='row'>
+          {/* <div className='row'>
             <div className='imgbox'>
               <img className='img' src='assets/project1.jpg' />
             </div>
@@ -37,7 +37,7 @@ export default class App extends Component {
             <div className='imgbox'>
               <img className='img' src='assets/project6.jpg' />
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     )
