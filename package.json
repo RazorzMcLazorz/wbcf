@@ -1,5 +1,5 @@
 {
-  "name": "react-typescript",
+  "name": "wbcf",
   "version": "1.0.0",
   "description": "Basic skeleton codebase for React applications that use TypeScript.",
   "engines": {
@@ -70,6 +70,7 @@
     "react-dom": "16.13.1",
     "react-router": "5.1.2",
     "react-router-dom": "5.1.2",
+    "react-typescript": "^1.0.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.21.0",
     "webpack": "4.42.1",
