@@ -8,10 +8,31 @@ import ShoppingCartIcon from '@material-ui/icons/ShoppingCart'
 import CustomDrawer from './Drawer'
 
 export default class ButtonAppBar extends Component {
+  state = {
+    isHide: false,
+    scrollPos: window.scrollY
+  }
+
+  hideBar = () => {
+
+    window.scrollY > 10 ?
+      this.setState({ isHide: true })
+      :
+      this.setState({ isHide: false });
+
+    console.log(window.scrollY)
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', () => this.hideBar);
+    console.log(this.state.scrollPos)
+    console.log(window.scrollY)
+  }
 
   render() {
+    console.log(window.scrollY)
     return (
-      <AppBar position="sticky">
+      <AppBar position="sticky" onScroll={this.hideBar}>
         <Toolbar style={{ justifyContent: 'space-between' }}>
 
           <CustomDrawer icon={<MenuIcon />} list={
@@ -20,10 +41,12 @@ export default class ButtonAppBar extends Component {
             ]
           } />
 
-          <a href='/' style={{ color: 'white', textDecoration: 'none' }}>
-            <Typography variant="h6">
-              Wolf's Bane Cabinetry and Furniture
+          <a href='/' style={{ color: 'white', textDecoration: 'none' }} >
+            {this.state.isHide &&
+              <Typography variant="h6">
+                Wolf's Bane Cabinetry and Furniture
               </Typography>
+            }
           </a>
 
           <IconButton color="inherit">

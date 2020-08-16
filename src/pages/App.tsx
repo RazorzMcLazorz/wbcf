@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import AppBar from '../components/appBar'
+import JustinsName from '../components/name'
 import Typography from '@material-ui/core/Typography'
 
 export default class App extends Component {
@@ -8,6 +9,7 @@ export default class App extends Component {
       <div className='app'>
         <AppBar />
         <div className='landingpartone'>
+          <JustinsName />
           <img className='firstSetup' src='assets/firstSetup.jpg' />
         </div>
         <div className='landingparttwo'>

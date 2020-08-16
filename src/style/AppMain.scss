@@ -3,10 +3,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  .firstSetup {
+  .justinsName {
+    z-index: 2;
+    position: absolute;
     margin-top: 50px;
+    font-size: 35px;
+    color: white;
+    display: flex;
+  }
+  .firstSetup {
     margin-bottom: 50px;
-    width: 95%;
+    width: 100%;
   }
 }
 
