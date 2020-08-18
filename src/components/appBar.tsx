@@ -3,9 +3,9 @@ import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import IconButton from '@material-ui/core/IconButton'
-import MenuIcon from '@material-ui/icons/Menu'
+
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart'
-import CustomDrawer from './Drawer'
+import CustomDrawer from './CustomDrawer'
 
 export default class ButtonAppBar extends Component {
   state = {
@@ -14,32 +14,28 @@ export default class ButtonAppBar extends Component {
   }
 
   hideBar = () => {
-
-    window.scrollY > 10 ?
+    window.scrollY > 100 ?
       this.setState({ isHide: true })
       :
       this.setState({ isHide: false });
-
-    console.log(window.scrollY)
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', () => this.hideBar);
-    console.log(this.state.scrollPos)
-    console.log(window.scrollY)
+    window.addEventListener('scroll', this.hideBar, true);
   }
 
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.hideBar);
+  }
+
+
+
   render() {
-    console.log(window.scrollY)
     return (
       <AppBar position="sticky" onScroll={this.hideBar}>
         <Toolbar style={{ justifyContent: 'space-between' }}>
 
-          <CustomDrawer icon={<MenuIcon />} list={
-            [
-              'Inventory',
-            ]
-          } />
+          <CustomDrawer />
 
           <a href='/' style={{ color: 'white', textDecoration: 'none' }} >
             {this.state.isHide &&

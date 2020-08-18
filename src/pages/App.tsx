@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import AppBar from '../components/appBar'
-import JustinsName from '../components/name'
+import JustinsName from '../components/JustinsName'
 import Typography from '@material-ui/core/Typography'
 
 export default class App extends Component {
