@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import AppBar from '../components/appBar'
 import JustinsName from '../components/JustinsName'
 import Typography from '@material-ui/core/Typography'
+import Footer from '../components/Footer'
 
 export default class App extends Component {
   render() {
@@ -41,6 +42,7 @@ export default class App extends Component {
             </div>
           </div>
         </div>
+        <Footer/>
       </div>
     )
   }
