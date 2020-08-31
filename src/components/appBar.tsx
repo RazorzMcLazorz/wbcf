@@ -3,13 +3,16 @@ import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
 import Typography from '@material-ui/core/Typography'
 import IconButton from '@material-ui/core/IconButton'
-
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart'
 import CustomDrawer from './CustomDrawer'
 
-export default class ButtonAppBar extends Component {
+interface IAppBar {
+  dontHide?: boolean
+}
+
+export default class ButtonAppBar extends Component<IAppBar> {
   state = {
-    isHide: false,
+    isHide: this.props.dontHide ? true : false,
     scrollPos: window.scrollY
   }
 
@@ -21,7 +24,8 @@ export default class ButtonAppBar extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.hideBar, true);
+    this.props.dontHide ? undefined :
+      window.addEventListener('scroll', this.hideBar, true);
   }
 
   componentWillUnmount() {

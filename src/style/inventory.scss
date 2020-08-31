@@ -1,0 +1,21 @@
+.invItem {
+  background-color: black;
+  width: 150px;
+  height: 150px;
+  margin: 15px;
+  &:hover {
+    background-color: grey;
+    cursor: pointer;
+  }
+}
+
+.inventory {
+  .invBody {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+  }
+}

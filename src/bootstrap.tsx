@@ -6,6 +6,7 @@ import { ThemeProvider } from '@material-ui/core/styles'
 import { MuiTheme } from './theme/MuiTheme'
 
 import App from './pages/App'
+import Inventory from './pages/Inventory'
 
 import './style/main.scss'
 
@@ -18,10 +19,12 @@ function main() {
           // Mobile Mode
           <Switch>
             <Route exact path="/" component={App} />
+            <Route exact path="/inventory" component={Inventory} />
           </Switch>
           : // Desktop Mode
           <Switch>
             <Route exact path="/" component={App} />
+            <Route exact path="/inventory" component={Inventory} />
           </Switch>
         }
       </BrowserRouter>

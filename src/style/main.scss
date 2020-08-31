@@ -1,5 +1,8 @@
 @import './AppMain.scss';
 @import './footer.scss';
+@import './backgroundColors.scss';
+@import './components/customDrawer.scss';
+@import './inventory.scss';
 
 *,
 *::after,
@@ -8,4 +11,9 @@
     padding: 0;
     box-sizing: inherit;
     font-family: 'Segoe UI Emoji';
+}
+
+::selection {
+    color: grey;
+    background: #212121;
 }

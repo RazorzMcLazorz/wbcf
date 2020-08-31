@@ -25,6 +25,9 @@ export default class App extends Component {
               <img className='img' src='assets/project2.jpg' />
             </div>
           </div>
+          <Typography variant='h4' className='rowText'>
+            Challenge the unknown.
+          </Typography>
           <div className='row'>
             <div className='imgbox'>
               <img className='img' src='assets/project3.jpg' />
@@ -33,6 +36,9 @@ export default class App extends Component {
               <img className='img' src='assets/project5.jpg' />
             </div>
           </div>
+          <Typography variant='h4' className='rowText'>
+            Every Detail matters.
+          </Typography>
           <div className='row'>
             <div className='imgbox'>
               <img className='img' src='assets/project4.jpg' />
