@@ -49,7 +49,7 @@ export default class ButtonAppBar extends Component<IAppBar> {
             }
           </a>
 
-          <IconButton color="inherit">
+          <IconButton color="inherit" href="/cart">
             <ShoppingCartIcon />
           </IconButton>
 

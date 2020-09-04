@@ -7,6 +7,9 @@ import { MuiTheme } from './theme/MuiTheme'
 
 import App from './pages/App'
 import Inventory from './pages/Inventory'
+import Cart from './pages/Cart'
+import Contact from './pages/Contact'
+import Login from './pages/Login'
 
 import './style/main.scss'
 
@@ -20,11 +23,17 @@ function main() {
           <Switch>
             <Route exact path="/" component={App} />
             <Route exact path="/inventory" component={Inventory} />
+            <Route exact path="/cart" component={Cart} />
+            <Route exact path="/contact" component={Contact} />
+            <Route exact path="/login" component={Login} />
           </Switch>
           : // Desktop Mode
           <Switch>
             <Route exact path="/" component={App} />
             <Route exact path="/inventory" component={Inventory} />
+            <Route exact path="/cart" component={Cart} />
+            <Route exact path="/contact" component={Contact} />
+            <Route exact path="/login" component={Login} />
           </Switch>
         }
       </BrowserRouter>
