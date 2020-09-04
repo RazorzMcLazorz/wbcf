@@ -17,11 +17,11 @@ export default class Footer extends Component {
           <a>SCSS</a>
         </div>
         <div className="footRight">
-          <a>
+          <div>
             {/* version number every push add .1 to this */}
             <a>v1.0</a>
             <a href="https://github.com/RazorzMcLazorz" target="_blank" className="i fab fa-github-square"></a>
-          </a>
+          </div>
         </div>
       </div>
     )

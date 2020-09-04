@@ -9,7 +9,11 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "noUnusedParameters": true,
-    "noUnusedLocals": true
+    "noUnusedLocals": true,
+    "baseUrl": "./",
+    "paths":{
+      "assets/*": ["static/assets/*"]
+    }
   },
   "include": ["./src/**/*"]
 }
