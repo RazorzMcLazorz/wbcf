@@ -17,42 +17,32 @@ export default class ButtonAppBar extends Component<IAppBar> {
   }
 
   hideBar = () => {
-    window.scrollY > 100 ?
-      this.setState({ isHide: true })
-      :
-      this.setState({ isHide: false });
+    window.scrollY > 100 ? this.setState({ isHide: true }) : this.setState({ isHide: false })
   }
 
   componentDidMount() {
-    this.props.dontHide ? undefined :
-      window.addEventListener('scroll', this.hideBar, true);
+    this.props.dontHide ? undefined : window.addEventListener('scroll', this.hideBar, true)
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.hideBar);
+    window.removeEventListener('scroll', this.hideBar)
   }
-
-
 
   render() {
     return (
-      <AppBar position="sticky" onScroll={this.hideBar}>
+      <AppBar position='sticky' onScroll={this.hideBar}>
         <Toolbar style={{ justifyContent: 'space-between' }}>
-
           <CustomDrawer />
 
-          <a href='/' style={{ color: 'white', textDecoration: 'none' }} >
-            {this.state.isHide &&
-              <Typography variant="h6">
-                Wolf's Bane Cabinetry and Furniture
-              </Typography>
-            }
+          <a href='/' style={{ color: 'white', textDecoration: 'none' }}>
+            {this.state.isHide && (
+              <Typography variant='h6'>Wolf's Bane Cabinetry and Furniture</Typography>
+            )}
           </a>
 
-          <IconButton color="inherit" href="/cart">
+          <IconButton color='inherit' href='/cart'>
             <ShoppingCartIcon />
           </IconButton>
-
         </Toolbar>
       </AppBar>
     )

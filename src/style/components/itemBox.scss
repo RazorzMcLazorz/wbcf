@@ -1,0 +1,65 @@
+.itemBox {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  user-select: none;
+  img {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+  }
+  .itemOverlay {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    opacity: 30%;
+    animation: fadeIn 0.3s ease-in;
+    background-color: black;
+    overflow: hidden;
+    cursor: pointer;
+    margin-top: -305px;
+  }
+
+  .itemOverlayContainer {
+    width: 300px;
+    height: 300px;
+    overflow-x: hidden;
+    position: fixed;
+    // margin-top: -305px;
+  }
+
+  .itemOverlayTag {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: dimgray;
+    width: 200px;
+    height: 60px;
+    margin-top: -250px;
+    transform-origin: 100% 0;
+    transform: skew(-15deg);
+    z-index: 10;
+    animation: slideIn 0.3s ease-in;
+    cursor: pointer;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 30%;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translate(-500px, 0px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}

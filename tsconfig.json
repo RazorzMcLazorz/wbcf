@@ -11,7 +11,7 @@
     "noUnusedParameters": true,
     "noUnusedLocals": true,
     "baseUrl": "./",
-    "paths":{
+    "paths": {
       "assets/*": ["static/assets/*"]
     }
   },

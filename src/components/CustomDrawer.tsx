@@ -6,8 +6,7 @@ import ListItemText from '@material-ui/core/ListItemText'
 import IconButton from '@material-ui/core/IconButton'
 import MenuIcon from '@material-ui/icons/Menu'
 
-interface IDrawer {
-}
+interface IDrawer {}
 
 class CustomDrawer extends Component<IDrawer> {
   state = {
@@ -28,30 +27,28 @@ class CustomDrawer extends Component<IDrawer> {
       {
         name: 'Contact Us',
         link: '/contact'
-      },
-      {
-        name: 'Login',
-        link: '/login'
       }
+      // {
+      //   name: 'Login',
+      //   link: '/login'
+      // }
     ]
   }
 
   render() {
     return (
       <div>
-        <IconButton color="inherit" onClick={() => this.setState({ open: true })}>
+        <IconButton color='inherit' onClick={() => this.setState({ open: true })}>
           <MenuIcon />
         </IconButton>
-        <Drawer
-          open={this.state.open}
-          onClose={() => this.setState({ open: false })}>
+        <Drawer open={this.state.open} onClose={() => this.setState({ open: false })}>
           <div className='defaultBackground drawerInner'>
             <List>
-              {this.state.list.map((val, key) =>
-                <ListItem key={key} button onClick={() => window.location.href = val.link}>
+              {this.state.list.map((val, key) => (
+                <ListItem key={key} button onClick={() => (window.location.href = val.link)}>
                   <ListItemText primary={val.name} className='drawerText' />
                 </ListItem>
-              )}
+              ))}
             </List>
           </div>
         </Drawer>

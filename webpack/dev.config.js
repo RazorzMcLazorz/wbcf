@@ -1,21 +1,19 @@
-const path = require('path');
-const webpackMerge = require('webpack-merge');
-const webpackCommon = require('./common.config');
+const path = require('path')
+const webpackMerge = require('webpack-merge')
+const webpackCommon = require('./common.config')
 
-const env = require('../env');
-const proxyRules = require('../proxy/rules');
+const env = require('../env')
+const proxyRules = require('../proxy/rules')
 
 // webpack plugins
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const DefinePlugin = require('webpack/lib/DefinePlugin');
-const HotModuleReplacementPlugin = require('webpack/lib/HotModuleReplacementPlugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const DefinePlugin = require('webpack/lib/DefinePlugin')
+const HotModuleReplacementPlugin = require('webpack/lib/HotModuleReplacementPlugin')
 
 module.exports = webpackMerge(webpackCommon, {
-
   devtool: 'inline-source-map',
   mode: 'development',
   output: {
-  
     path: path.resolve(__dirname, '../static/dist'),
 
     filename: '[name].js',
@@ -25,11 +23,9 @@ module.exports = webpackMerge(webpackCommon, {
     chunkFilename: '[id]-chunk.js',
 
     publicPath: '/'
-
   },
 
   module: {
-
     rules: [
       {
         test: /\.s?css$/,
@@ -54,7 +50,6 @@ module.exports = webpackMerge(webpackCommon, {
         ]
       }
     ]
-
   },
 
   plugins: [
@@ -90,5 +85,4 @@ module.exports = webpackMerge(webpackCommon, {
     },
     proxy: proxyRules
   }
-
-});
+})

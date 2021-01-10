@@ -3,17 +3,20 @@
 @import './backgroundColors.scss';
 @import './components/customDrawer.scss';
 @import './inventory.scss';
+@import './components//itemBox.scss';
+@import './cart.scss';
+@import './contact.scss';
 
 *,
 *::after,
 *::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-    font-family: 'Segoe UI Emoji';
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: 'Segoe UI Emoji';
 }
 
 ::selection {
-    color: grey;
-    background: #212121;
+  color: grey;
+  background: #212121;
 }

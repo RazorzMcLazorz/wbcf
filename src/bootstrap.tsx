@@ -18,27 +18,29 @@ function main() {
     <ThemeProvider theme={MuiTheme}>
       <CssBaseline />
       <BrowserRouter>
-        {screen.width < 600 ?
+        {screen.width < 600 ? (
           // Mobile Mode
           <Switch>
-            <Route exact path="/" component={App} />
-            <Route exact path="/inventory" component={Inventory} />
-            <Route exact path="/cart" component={Cart} />
-            <Route exact path="/contact" component={Contact} />
-            <Route exact path="/login" component={Login} />
+            <Route exact path='/' component={App} />
+            <Route exact path='/inventory' component={Inventory} />
+            <Route exact path='/cart' component={Cart} />
+            <Route exact path='/contact' component={Contact} />
+            <Route exact path='/login' component={Login} />
           </Switch>
-          : // Desktop Mode
+        ) : (
+          // Desktop Mode
           <Switch>
-            <Route exact path="/" component={App} />
-            <Route exact path="/inventory" component={Inventory} />
-            <Route exact path="/cart" component={Cart} />
-            <Route exact path="/contact" component={Contact} />
-            <Route exact path="/login" component={Login} />
+            <Route exact path='/' component={App} />
+            <Route exact path='/inventory' component={Inventory} />
+            <Route exact path='/cart' component={Cart} />
+            <Route exact path='/contact' component={Contact} />
+            <Route exact path='/login' component={Login} />
           </Switch>
-        }
+        )}
       </BrowserRouter>
-    </ThemeProvider>
-    , document.querySelector('.app-wrapper'))
+    </ThemeProvider>,
+    document.querySelector('.app-wrapper')
+  )
 }
 
 document.addEventListener('DOMContentLoaded', main)
